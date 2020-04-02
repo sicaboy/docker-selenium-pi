@@ -1,4 +1,4 @@
-FROM kynetiv/selenium-base-pi:3.141.59-dubnium
+FROM vladislavzubov/selenium-base-pi
 
 USER root
 

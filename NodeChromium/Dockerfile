@@ -1,4 +1,4 @@
-FROM kynetiv/selenium-node-base-pi:3.141.59-dubnium
+FROM vladislavzubov/selenium-node-base-pi
 
 USER root
 
@@ -24,7 +24,7 @@ USER seluser
 #============================================
 # linking chromium-chromedriver to where chromedriver would be in path
 # this avoids needing to set custom binary paths
-RUN sudo ln -fs /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
+# RUN sudo ln -fs /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
 
 
 # We install the available chromium chromedriver above with browser

@@ -1,4 +1,4 @@
-FROM kynetiv/selenium-node-chromium-pi:3.141.59-dubnium
+FROM vladislavzubov/selenium-node-chromium-pi
 
 USER seluser
 

@@ -1,4 +1,4 @@
-FROM kynetiv/selenium-base-pi:3.141.59-dubnium
+FROM vladislavzubov/selenium-base-pi
 
 USER seluser
 
@@ -28,7 +28,7 @@ ENV GRID_DEBUG false
 ENV GRID_HUB_PORT 4444
 # As string, maps to "host"
 ENV GRID_HUB_HOST "0.0.0.0"
- 
+
 COPY generate_config \
     start-selenium-hub.sh \
     /opt/bin/

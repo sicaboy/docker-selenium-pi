@@ -57,7 +57,7 @@ ENV HOME=/home/seluser
 #=======================================
 # Create shared / common bin directory
 #=======================================
-RUN  mkdir -p /opt/bin 
+RUN  mkdir -p /opt/bin
 
 #======================================
 # Add Grid check script
@@ -76,7 +76,7 @@ COPY supervisord.conf /etc
 RUN  mkdir -p /opt/selenium /var/run/supervisor /var/log/supervisor \
   && touch /opt/selenium/config.json \
   && chmod -R 777 /opt/selenium /var/run/supervisor /var/log/supervisor /etc/passwd \
-  && wget --no-verbose https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar \
+  && wget --no-verbose https://selenium-release.storage.googleapis.com/3.9/selenium-server-standalone-3.9.1.jar \
     -O /opt/selenium/selenium-server-standalone.jar \
   && chgrp -R 0 /opt/selenium ${HOME} /var/run/supervisor /var/log/supervisor \
   && chmod -R g=u /opt/selenium ${HOME} /var/run/supervisor /var/log/supervisor
